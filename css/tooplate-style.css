@@ -111,12 +111,12 @@ b, strong {
   display: inline-block;
   vertical-align: top;
   margin-top: 5px;
-  min-width: 260px;
+  min-width: 400px;
   position: relative;
 }
 
 .animated-item {
-  color: #ffc200;
+  color: rgb(118,15,178);
 }
 
 .animated-item {
