@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./sidepanel.module.css";
 import { BiSolidDownArrow } from "react-icons/bi";
-import { ProjectTypes } from "@/data/Projects";
 import Section from "./Section/Section";
 import { IProjectType } from "@/app/interfaces/IProject";
 import useSWR from "swr";

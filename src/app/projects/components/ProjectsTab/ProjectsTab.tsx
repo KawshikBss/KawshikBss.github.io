@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import styles from "./projectstab.module.css";
-import { Projects } from "@/data/Projects";
 import ProjectCard from "./ProjectCard/ProjectCard";
 import { IProject } from "@/app/interfaces/IProject";
 
