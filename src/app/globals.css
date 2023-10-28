@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -16,12 +17,102 @@
   }
 }
 
+*,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-size: 16px;
+  transition: 0.3s all ease-in-out;
+  font-family: "Fira Code", monospace;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #011627;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr 0.5fr 6.5fr 4fr 1fr;
+  grid-template-rows: min-content 1fr 20fr min-content;
+}
+
+.code {
+  margin-right: 1rem;
+  color: #607b96;
+}
+
+.code-line {
+  display: flex;
+  align-items: center;
+}
+
+.code-tab {
+  color: transparent;
+  margin-right: 1.5rem;
+}
+
+.code-line-index {
+  display: block;
+  width: 1rem;
+  margin-right: 1.1rem;
+}
+
+.code-const {
+  color: #C98BDF;
+}
+
+.code-var-call {
+  color: #fff;
+  margin-right: 0;
+}
+
+.code-attr {
+  color: #55dee8;
+  margin-right: 0;
+}
+
+.code-console {
+  color: #5565e8;
+  margin-right: 0;
+}
+
+.code-var {
+  color: #5565e8;
+}
+
+.code-log {
+  color: #e1e987;
+  margin-right: 0;
+}
+
+.code-white {
+  color: #fff;
+}
+
+.code-comma {
+  margin-right: 0;
+  color: #fff;
+}
+
+.code-paren {
+  color: #fea55f;
+  margin-right: 0;
+}
+
+.code-hook {
+  color: #5565e8;
+  margin-left: 1rem;
+}
+
+.code-curly {
+  color: #e1e987;
+  margin-right: 0;
+}
+
+.code-angular {
+  color: #c65ffe;
+  margin-right: 0;
+}
+
+.code-quotes {
+  color: #fea55f;
+  margin-right: 0;
+  text-wrap: nowrap;
 }

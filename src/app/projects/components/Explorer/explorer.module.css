@@ -1,0 +1,30 @@
+.container {
+  grid-column: 5/8;
+  grid-row: 2/3;
+  border-bottom: 1px solid #1e2d3d;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.explorer_tab {
+  color: #607b96;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-right: 1px solid #1e2d3d;
+}
+
+.explorer_tab > span {
+    padding: 0.05rem;
+    border-radius: 0.2rem;
+}
+
+.explorer_tab > span:hover {
+  background-color: #1e2d3d;
+  cursor: pointer;
+}

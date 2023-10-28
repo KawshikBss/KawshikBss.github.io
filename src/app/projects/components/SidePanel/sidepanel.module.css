@@ -1,0 +1,23 @@
+.container {
+  grid-column: 1/5;
+  grid-row: 2/4;
+  border-right: 1px solid #1e2d3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.section {
+  width: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-bottom: 1px solid #1e2d3d;
+}

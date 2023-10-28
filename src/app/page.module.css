@@ -1,0 +1,96 @@
+main.content {
+  grid-column: 1/8;
+  grid-row: 2/4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8rem;
+}
+
+.right_panel {
+  width: 31.875rem;
+  height: 29.6875rem;
+  border-radius: 0.5rem;
+  border: 1px solid #0c1616;
+  background-image: linear-gradient(13deg, #17555346, #43d9ad46);
+  position: relative;
+  padding: 0.75rem;
+}
+
+.right_panel_blurs {
+  position: absolute;
+  max-width: 48.75rem;
+  max-height: 46.375rem;
+  top: -9rem;
+  left: -9rem;
+}
+
+.right_panel_inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0.6rem;
+}
+
+.right_panel_bolt_top_left {
+  width: 0.75rem;
+  height: 0.75rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.right_panel_bolt_top_right {
+  width: 0.75rem;
+  height: 0.75rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.right_panel_bolt_bottom_right {
+  width: 0.75rem;
+  height: 0.75rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.right_panel_bolt_bottom_left {
+  width: 0.75rem;
+  height: 0.75rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.right_panel_profile_pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.introduction {
+  color: #e5e9f0;
+}
+
+.introduction > p {
+  font-size: 13.5pt;
+}
+
+.introduction > h2 {
+  font-size: 46.5pt;
+}
+
+.introduction > .designation {
+  font-size: 32pt;
+  color: #4d5bce;
+}

@@ -1,0 +1,19 @@
+.container {
+  grid-column: 1/2;
+  grid-row: 2/4;
+  border-right: 1px solid #1e2d3d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1.1rem;
+}
+
+.panel_item > a > svg {
+  font-size: 18pt;
+  color: #607b96;
+}
+
+.panel_item > a:hover > svg {
+  color: #fff;
+}

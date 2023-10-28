@@ -1,0 +1,69 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.subsection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.extended > .subsection,
+.subsection:hover {
+  color: #fff;
+}
+
+.extended > .subsection > svg {
+  transform: rotate(90deg);
+}
+
+.container:nth-child(1) > .subsection > .section_icon {
+  color: #e99287;
+}
+
+.container:nth-child(2) > .subsection > .section_icon {
+  color: #43d9ad;
+}
+
+.container:nth-child(3) > .subsection > .section_icon {
+  color: #3a49a4;
+}
+
+.subsection_list {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.875rem;
+  height: 0;
+  overflow: hidden;
+  transition: 0.8s all ease-in-out;
+}
+
+.extended > .subsection_list {
+  height: 100%;
+}
+
+.subsection_list_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.extended > .subsection_list_item,
+.subsection_list_item:hover {
+  color: #fff;
+}

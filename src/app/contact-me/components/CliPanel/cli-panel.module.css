@@ -1,0 +1,29 @@
+.container {
+  grid-column: 6/8;
+  grid-row: 3/4;
+  border-right: 1px solid #1e2d3d;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 6rem;
+  overflow: scroll;
+}
+
+.container::-webkit-scrollbar {
+  /* width: 1.625rem; */
+  padding: 0.234375rem;
+  padding-top: 0.30625rem;
+  border-left: 1px solid #1e2d3d;
+}
+
+/* Track */
+.container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+  width: 1.125rem;
+  background: #607b96;
+  opacity: 0;
+}

@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.input_group {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+}
+
+.input_field {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #011221;
+  border: 1px solid #607b96;
+  color: #465e77;
+}
+
+textarea.input_field {
+  height: 9rem;
+}
+
+.submit_btn {
+  color: #fff;
+  background-color: #1c2b3a;
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.5rem;
+}

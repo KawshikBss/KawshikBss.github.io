@@ -1,0 +1,15 @@
+export default [
+  "const american_international_university_bangladesh = () => {",
+  "\\tconst institute = 'American International University - Bangladesh';",
+  "\\tconst program = 'Bachelor of Science in Computer Science & Engineering';",
+  "\\tconst department = 'Faculty of Science & Technology';",
+  "\\tconst major = 'Software Engineering';",
+  "\\tconst course_duration = '2019-2023';",
+  "\\tconsole.log(institute);",
+  "\\tconsole.log(program);",
+  "\\tconsole.log(department);",
+  "\\tconsole.log(major);",
+  "\\tconsole.log(course_duration);",
+  "\\tprojects_showcase.map((item) => console.log(item))",
+  "};",
+];

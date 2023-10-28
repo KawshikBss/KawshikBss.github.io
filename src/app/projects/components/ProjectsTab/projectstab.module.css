@@ -1,0 +1,34 @@
+.container {
+  grid-column: 5/8;
+  grid-row: 3/4;
+  border-right: 1px solid #1e2d3d;
+  color: #607b96;
+  padding-top: 8rem;
+  line-height: 1.625rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  justify-content: center;
+  align-items: center;
+}
+
+.container::-webkit-scrollbar {
+  /* width: 1.625rem; */
+  padding: 0.234375rem;
+  padding-top: 0.30625rem;
+  border-left: 1px solid #1e2d3d;
+}
+
+/* Track */
+.container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+  width: 1.125rem;
+  background: #607b96;
+  opacity: 0;
+}
