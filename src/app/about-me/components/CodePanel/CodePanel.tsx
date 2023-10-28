@@ -3,9 +3,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./codepanel.module.css";
 import { parseCode } from "@/lib/parseCode";
 import { useAppSelector } from "@/redux/hooks";
-import CodeLines from "./CodeLines";
 import useSWR from "swr";
-import { ICode } from "../../interfaces/ICode";
 
 type Props = {};
 

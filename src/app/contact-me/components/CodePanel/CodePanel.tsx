@@ -8,40 +8,40 @@ import SendMail from "../SendMail/SendMail";
 import { IMail } from "@/app/interfaces/IMail";
 
 type Props = {
-  currentTab?: IContactItem;
-  messageData?: IMail;
-  handleMessageData?: (
-    event:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => void;
+    currentTab?: IContactItem;
+    messageData?: IMail;
+    handleMessageData?: (
+        event:
+            | React.ChangeEvent<HTMLInputElement>
+            | React.ChangeEvent<HTMLTextAreaElement>
+    ) => void;
 };
 
 const CodePanel = (props: Props) => {
-  return (
-    <div className={styles.container}>
-      {props.currentTab?.compopnent ? (
-        <SendMail
-          messageData={props.messageData}
-          handleMessageData={props.handleMessageData}
-        />
-      ) : props.currentTab?.content ? (
-        parseCode(props.currentTab.content).map((line, lineIndex) => (
-          <span key={lineIndex} className="code-line">
-            {line.map((code, index) =>
-              React.createElement(
-                code?.component,
-                { ...code.props, key: index },
-                code.children
-              )
+    return (
+        <div className={styles.container}>
+            {props.currentTab?.compopnent ? (
+                <SendMail
+                    messageData={props.messageData}
+                    handleMessageData={props.handleMessageData}
+                />
+            ) : props.currentTab?.content ? (
+                parseCode(props.currentTab.content).map((line, lineIndex) => (
+                    <span key={lineIndex} className="code-line">
+                        {line.map((code, index) =>
+                            React.createElement(
+                                code?.component,
+                                { ...code.props, key: index },
+                                code.children
+                            )
+                        )}
+                    </span>
+                ))
+            ) : (
+                ""
             )}
-          </span>
-        ))
-      ) : (
-        ""
-      )}
-    </div>
-  );
+        </div>
+    );
 };
 
 export default CodePanel;

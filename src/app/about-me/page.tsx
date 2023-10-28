@@ -1,10 +1,8 @@
-import React, { useState } from "react";
-import styles from "./about.module.css";
+import React from "react";
 import SidePanel from "./components/SidePanel/SidePanel";
 import DirectoriesPanel from "./components/DirectoriesPanel/DirectoriesPanel";
 import Explorer from "./components/Explorer/Explorer";
 import CodePanel from "./components/CodePanel/CodePanel";
-import CliPanel from "./components/CliPanel/CliPanel";
 import IDirectory from "./interfaces/IDirectory";
 
 const GetDirectories = async () => {

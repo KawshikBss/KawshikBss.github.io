@@ -1,4 +1,3 @@
-import AboutUser from "@/data/AboutUser";
 import React from "react";
 import Accordation from "./Accordation/Accordation";
 import styles from "./directories.module.css";

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import styles from "./contact.module.css";
 import DirectoriesPanel from "./components/DirectoriesPanel/DirectoriesPanel";
 import Explorer from "./components/Explorer/Explorer";
 import CodePanel from "./components/CodePanel/CodePanel";

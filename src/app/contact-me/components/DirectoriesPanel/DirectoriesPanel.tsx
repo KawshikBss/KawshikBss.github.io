@@ -16,7 +16,10 @@ const DirectoriesPanel = (props: Props) => {
         data: contactsList,
         error,
         isLoading,
-    } = useSWR(`http://localhost:5000/contacts/kawshikbss@gmail.com`, fetcher);
+    } = useSWR(
+        `${process.env.NEXT_PUBLIC_API_BASE}/contacts/kawshikbss@gmail.com`,
+        fetcher
+    );
     return (
         <div className={styles.dirs_panel}>
             {ContactUser.map((section, index) => (
@@ -26,7 +29,9 @@ const DirectoriesPanel = (props: Props) => {
                     handleTabs={props?.handleTabs}
                 />
             ))}
-            {contactsList?.data
+            {isLoading || error
+                ? ""
+                : contactsList?.data
                 ? contactsList.data.map((section: IContact, index: number) => (
                       <Accordation
                           key={index}

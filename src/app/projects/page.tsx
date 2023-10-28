@@ -1,13 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import styles from "./projects.module.css";
+import React, { useState } from "react";
 import SidePanel from "./components/SidePanel/SidePanel";
 import Explorer from "./components/Explorer/Explorer";
 import { IProjectType } from "../interfaces/IProject";
 import ProjectsTab from "./components/ProjectsTab/ProjectsTab";
 import useSWR from "swr";
-import { url } from "inspector";
 
 const fetcher = (url: string, body: string[]) =>
     fetch(url, {

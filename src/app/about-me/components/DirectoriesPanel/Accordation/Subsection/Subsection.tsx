@@ -15,11 +15,6 @@ type Props = {
 const Subsection = (props: Props) => {
     const [extended, setExtended] = useState(false);
     const handleExtendSection = () => setExtended((prev) => !prev);
-    /* const openTab = (subsection: IDirectory) => {
-    if (props?.handleTabs) {
-      props.handleTabs(subsection, "append");
-    }
-  }; */
     const dispatch = useAppDispatch();
     const openDirectory = (targetDirectory: IFile) =>
         dispatch(addDirectory(targetDirectory));
@@ -45,7 +40,6 @@ const Subsection = (props: Props) => {
                         className={styles.subsection_list_item}
                         onClick={() => openDirectory(subsection)}
                     >
-                        {/* {subsection?.icon && React.createElement(subsection.icon)} */}
                         {subsection.label.length > 10
                             ? subsection.label.slice(0, 7) + "..."
                             : subsection.label}
