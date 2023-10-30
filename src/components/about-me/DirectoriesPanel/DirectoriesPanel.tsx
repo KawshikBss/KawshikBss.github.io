@@ -1,7 +1,7 @@
 import React from "react";
 import Accordation from "./Accordation/Accordation";
 import styles from "./directories.module.css";
-import IDirectory from "../../interfaces/IDirectory";
+import IDirectory from "@/app/interfaces/IDirectory";
 
 type Props = {
     directoriesList: IDirectory[];
