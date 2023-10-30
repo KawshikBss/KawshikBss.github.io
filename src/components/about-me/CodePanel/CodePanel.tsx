@@ -14,7 +14,7 @@ const CodePanel = (props: Props) => {
         (state) => state.directoriesReducer.activeDirectory
     );
 
-    const shouldFetch = activeDirectory?.code !== undefined;
+    const shouldFetch = activeDirectory?.code !== null;
 
     const {
         data: codeData,

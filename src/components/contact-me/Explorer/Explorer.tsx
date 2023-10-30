@@ -5,14 +5,14 @@ import { appendStyle } from "@/lib/utils";
 import { IContactItem } from "@/app/interfaces/IContact";
 
 type Props = {
-    currentTab?: IContactItem | undefined;
-    setCurrentTab?: (tab: IContactItem | undefined) => void;
+    currentTab?: IContactItem | null;
+    setCurrentTab?: (tab: IContactItem | null) => void;
     openedTabs?: IContactItem[];
     handleTabs?: (tab: IContactItem, type: string) => void;
 };
 
 const Explorer = (props: Props) => {
-    const setCurrentTab = (tab: IContactItem | undefined) => {
+    const setCurrentTab = (tab: IContactItem | null) => {
         if (props?.setCurrentTab) {
             props.setCurrentTab(tab);
         }

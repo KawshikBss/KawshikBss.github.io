@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 
 interface DirectoryState {
-    directoriesList: IFile[] | undefined;
+    directoriesList: IFile[] | null;
     activeDirectory: IFile | null;
 }
 
@@ -41,7 +41,7 @@ export const directoriesSlice = createSlice({
                     ? tmp?.[0]
                     : null;
             }
-            state.directoriesList = tmp;
+            state.directoriesList = tmp ? tmp : null;
         },
     },
 });

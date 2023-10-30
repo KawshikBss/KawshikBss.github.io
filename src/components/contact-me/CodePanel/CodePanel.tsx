@@ -8,7 +8,7 @@ import SendMail from "../SendMail/SendMail";
 import { IMail } from "@/app/interfaces/IMail";
 
 type Props = {
-    currentTab?: IContactItem;
+    currentTab: IContactItem | null;
     messageData?: IMail;
     handleMessageData?: (
         event:

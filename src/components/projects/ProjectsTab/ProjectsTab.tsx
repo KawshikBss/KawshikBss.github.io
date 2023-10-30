@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard/ProjectCard";
 import { IProject } from "@/app/interfaces/IProject";
 
 type Props = {
-    projectsList: IProject[] | undefined;
+    projectsList: IProject[] | null;
     projectsListIsLoading: boolean;
 };
 

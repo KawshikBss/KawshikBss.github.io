@@ -12,9 +12,7 @@ type Props = {};
 
 const ContactMe = (props: Props) => {
     const [tabsQueue, setTabsQueue] = useState<IContactItem[]>([]);
-    const [currentTab, setCurrentTab] = useState<IContactItem | undefined>(
-        undefined
-    );
+    const [currentTab, setCurrentTab] = useState<IContactItem | null>(null);
     const handleTabs = (tab: IContactItem, type = "append") => {
         setTabsQueue((prev) => {
             switch (type) {
@@ -30,8 +28,8 @@ const ContactMe = (props: Props) => {
                                 ? curr
                                 : tmp.length
                                 ? tmp[0]
-                                : undefined
-                            : undefined;
+                                : null
+                            : null;
                     });
                     return tmp;
                 default:
