@@ -5,11 +5,11 @@ import styles from "./explorer.module.css";
 import { AiOutlineClose } from "react-icons/ai";
 import { appendStyle } from "@/lib/utils";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import IDirectory, { IFile } from "../../interfaces/IDirectory";
 import {
     addDirectory,
     removeDirectory,
 } from "@/redux/features/directory-slice";
+import { IFile } from "@/app/interfaces/IDirectory";
 
 type Props = {};
 
