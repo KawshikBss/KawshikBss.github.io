@@ -13,16 +13,18 @@ const CodePanel = (props: Props) => {
     const activeDirectory = useAppSelector(
         (state) => state.directoriesReducer.activeDirectory
     );
+
+    const shouldFetch = activeDirectory?.code !== undefined;
+
     const {
         data: codeData,
         error,
         isLoading,
     } = useSWR(
-        `${process.env.NEXT_PUBLIC_API_BASE}/code/${activeDirectory?.code}`,
-        fetcher
-    );
-    console.info(
-        `${process.env.NEXT_PUBLIC_API_BASE}/code/${activeDirectory?.code}`
+        shouldFetch
+            ? `${process.env.NEXT_PUBLIC_API_BASE}/code/${activeDirectory?.code}`
+            : null,
+        shouldFetch ? fetcher : null
     );
 
     return (
