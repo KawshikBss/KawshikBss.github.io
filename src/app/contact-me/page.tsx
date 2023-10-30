@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import DirectoriesPanel from "./components/DirectoriesPanel/DirectoriesPanel";
-import Explorer from "./components/Explorer/Explorer";
-import CodePanel from "./components/CodePanel/CodePanel";
+import DirectoriesPanel from "../../components/contact-me/DirectoriesPanel/DirectoriesPanel";
+import Explorer from "../../components/contact-me/Explorer/Explorer";
+import CodePanel from "../../components/contact-me/CodePanel/CodePanel";
 import { IContactItem } from "../interfaces/IContact";
-import CliPanel from "./components/CliPanel/CliPanel";
+import CliPanel from "../../components/contact-me/CliPanel/CliPanel";
 import { IMail } from "../interfaces/IMail";
 
 type Props = {};

@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import SidePanel from "./components/SidePanel/SidePanel";
-import Explorer from "./components/Explorer/Explorer";
+import SidePanel from "../../components/projects/SidePanel/SidePanel";
+import Explorer from "../../components/projects/Explorer/Explorer";
 import { IProjectType } from "../interfaces/IProject";
-import ProjectsTab from "./components/ProjectsTab/ProjectsTab";
+import ProjectsTab from "../../components/projects/ProjectsTab/ProjectsTab";
 import useSWR from "swr";
 
 const fetcher = (url: string, body: string[]) =>

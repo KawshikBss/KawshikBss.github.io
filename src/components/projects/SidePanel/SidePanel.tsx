@@ -3,9 +3,10 @@
 import React, { useState, useEffect } from "react";
 import styles from "./sidepanel.module.css";
 import { BiSolidDownArrow } from "react-icons/bi";
-import Section from "./Section/Section";
+// import Section from "./Section/Section";
 import { IProjectType } from "@/app/interfaces/IProject";
 import useSWR from "swr";
+import Section from "./Section/Section";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 

@@ -1,4 +1,4 @@
-import IDirectory, { IFile } from "@/app/about-me/interfaces/IDirectory";
+import IDirectory, { IFile } from "@/app/interfaces/IDirectory";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 

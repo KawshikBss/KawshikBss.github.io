@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { MdArrowForwardIos, MdWork } from "react-icons/md";
 import styles from "./subsection.module.css";
 import { FaFolder, FaFolderOpen, FaUniversity } from "react-icons/fa";
-import IDirectory, { IFile } from "@/app/about-me/interfaces/IDirectory";
+import IDirectory, { IFile } from "@/app/interfaces/IDirectory";
 import { useAppDispatch } from "@/redux/hooks";
 import { addDirectory } from "@/redux/features/directory-slice";
 

@@ -5,7 +5,7 @@ import styles from "./accordation.module.css";
 import { appendStyle } from "@/lib/utils";
 import { BiSolidRightArrow } from "react-icons/bi";
 import Subsection from "./Subsection/Subsection";
-import IDirectory from "@/app/about-me/interfaces/IDirectory";
+import IDirectory from "@/app/interfaces/IDirectory";
 
 type Props = {
     section: IDirectory;

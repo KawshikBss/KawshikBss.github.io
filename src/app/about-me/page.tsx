@@ -1,9 +1,9 @@
 import React from "react";
-import SidePanel from "./components/SidePanel/SidePanel";
-import DirectoriesPanel from "./components/DirectoriesPanel/DirectoriesPanel";
-import Explorer from "./components/Explorer/Explorer";
-import CodePanel from "./components/CodePanel/CodePanel";
-import IDirectory from "./interfaces/IDirectory";
+import SidePanel from "@/components/about-me/SidePanel/SidePanel";
+import DirectoriesPanel from "@/components/about-me/DirectoriesPanel/DirectoriesPanel";
+import Explorer from "@/components/about-me/Explorer/Explorer";
+import CodePanel from "@/components/about-me/CodePanel/CodePanel";
+import IDirectory from "../interfaces/IDirectory";
 
 const GetDirectories = async () => {
     const res = await fetch(
@@ -21,9 +21,7 @@ const AboutMe = async (props: Props) => {
             <DirectoriesPanel directoriesList={directoriesList} />
             <Explorer />
             <CodePanel />
-            {/* 
-            <DirectoriesPanel directoriesList={[]} handleTabs={handleTabs} />
-            <CliPanel item={currentTab} /> */}
+            {/* <CliPanel item={currentTab} /> */}
         </>
     );
 };
