@@ -18,7 +18,7 @@ interface IUserLink {
 
 const GetUserLinks = async () => {
     const res = await fetch(
-        "http://localhost:5000/contacts/kawshikbss@gmail.com/find-me-in"
+        `${process.env.NEXT_PUBLIC_API_BASE}/contacts/kawshikbss@gmail.com/find-me-in`
     );
     const data = await res.json();
     return data.data;
