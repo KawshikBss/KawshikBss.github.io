@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaHandPointLeft, FaHandPointRight } from "react-icons/fa";
 import { AiOutlineEnter } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 type Props = {
     items: number[];
@@ -20,8 +21,15 @@ function Carousel({ items }: Props) {
             return prev + 1 < items.length ? prev + 1 : prev;
         });
     return (
-        <div className="w-full h-[80vh] md:h-[100vh] relative">
-            <div className="h-full bg-[url('/hero-bg.jpg')] bg-cover bg-center" style={{WebkitFilter: 'blur(8px)'}} />
+        <motion.div
+            whileInView={{ left: [-1000, 0] }}
+            transition={{ duration: 1.7}}
+            className="w-full h-[80vh] md:h-[100vh] relative"
+        >
+            <div
+                className="h-full bg-[url('/hero-bg.jpg')] bg-cover bg-center"
+                style={{ WebkitFilter: "blur(8px)" }}
+            />
             <div className="w-full h-full flex flex-row items-center justify-around py-20 absolute inset-0">
                 <FaHandPointLeft
                     onClick={prev}
@@ -69,7 +77,7 @@ function Carousel({ items }: Props) {
                     className="w-[30px] h-[30px] md:w-[60px] md:h-[60px] -rotate-45 hover:rotate-0 hover:scale-110 cursor-pointer text-[#fdfdfd] transition-all duration-300 ease-in-out"
                 />
             </div>
-        </div>
+        </motion.div>
     );
 }
 

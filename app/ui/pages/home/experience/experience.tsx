@@ -1,6 +1,7 @@
-import Drops from "@/app/ui/components/drops";
+"use client";
 import React from "react";
 import Card from "./card";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -10,9 +11,24 @@ function Experience({}: Props) {
             className="w-full flex flex-col items-center gap-20 py-20"
             style={{ perspective: "1800px" }}
         >
-            <span className="text-[#14e956] font-black text-4xl py-3 px-7 border-4 border-[#0c8c34] rounded-xl bg-[#12141d] uppercase">
+            <motion.span
+                whileInView={{
+                    transform: [
+                        "rotateY(-180deg)",
+                        "rotateY(0deg)",
+                        "rotateY(30deg)",
+                        "rotateY(-30deg)",
+                        "rotateY(0deg)",
+                    ],
+                    opacity: 1,
+                }}
+                transition={{
+                    duration: 2,
+                }}
+                className="text-[#14e956] font-black text-4xl py-3 px-7 border-4 border-[#0c8c34] rounded-xl bg-[#12141d] uppercase"
+            >
                 Experience
-            </span>
+            </motion.span>
             <Card index={0} />
             <Card index={1} />
         </div>
