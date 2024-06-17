@@ -22,7 +22,7 @@ function AboutMe({}: Props) {
                 transition={{
                     duration: 2,
                 }}
-                className="text-[#14e956] font-black text-4xl py-3 px-7 border-4 border-[#0c8c34] rounded-xl bg-[#12141d] uppercase"
+                className="text-[#14e956] font-black text-center text-2xl md:text-4xl py-2 md:py-3 px-3 md:px-7 border-4 border-[#0c8c34] rounded-xl bg-[#12141d] uppercase"
             >
                 About Me
             </motion.span>
@@ -55,7 +55,7 @@ function AboutMe({}: Props) {
                     />
                 </motion.div>
                 <motion.div
-                    whileInView={{ x: [400, 0], opacity: [0, 1] }}
+                    whileInView={{ x: [100, 0], opacity: [0, 1] }}
                     transition={{ duration: 1 }}
                     className="w-full md:w-3/5 flex flex-col items-start justify-between gap-10 p-5 md:pr-12"
                 >

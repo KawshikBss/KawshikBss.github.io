@@ -22,7 +22,7 @@ export default function Skills({}: Props) {
                 transition={{
                     duration: 2,
                 }}
-                className="text-[#14e956] font-black text-4xl py-3 px-7 border-4 border-[#0c8c34] rounded-xl bg-[#12141d] uppercase"
+                className="text-[#14e956] font-black text-center text-2xl md:text-4xl py-2 md:py-3 px-3 md:px-7 border-4 border-[#0c8c34] rounded-xl bg-[#12141d] uppercase"
             >
                 Skillset
             </motion.span>
@@ -40,7 +40,7 @@ export default function Skills({}: Props) {
                 transition={{
                     duration: 2,
                 }}
-                className=" w-2/5 flex flex-row justify-between items-start flex-wrap gap-2 bg-[#0c8c34] p-4 rounded-3xl"
+                className="w-5/6 md:w-2/5 flex flex-row justify-between items-start flex-wrap gap-2 bg-[#0c8c34] p-4 rounded-3xl"
             >
                 <span className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-base text-[#f5f5f5] capitalize">
                     <FaReact className="text-[#0c8c34] w-[27px] h-[27px]" />

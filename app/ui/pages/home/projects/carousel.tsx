@@ -22,7 +22,7 @@ function Carousel({ items }: Props) {
         });
     return (
         <motion.div
-            whileInView={{ left: [-1000, 0] }}
+            whileInView={{ left: [-100, 0] }}
             transition={{ duration: 1.7}}
             className="w-full h-[80vh] md:h-[100vh] relative"
         >

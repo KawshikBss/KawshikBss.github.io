@@ -10,7 +10,7 @@ function Hero({}: Props) {
         <div className="w-full bg-[url('/hero-bg.jpg')] bg-cover bg-center">
             <div className="w-full overflow-x-hidden bg-black/70 flex flex-col-reverse md:flex-row justify-between items-center gap-5 md:gap-0 px-10 md:px-20 pt-16 md:pt-32 pb-4 md:pb-8">
                 <motion.div
-                    whileInView={{ x: [-400, 0], opacity: [0, 1] }}
+                    whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                     transition={{ duration: 1 }}
                     className="w-full md:w-2/5 flex flex-col items-start gap-7"
                 >
@@ -36,7 +36,7 @@ function Hero({}: Props) {
                     </p>
                 </motion.div>
                 <motion.img
-                    whileInView={{ x: [400, 0], opacity: [0, 1] }}
+                    whileInView={{ x: [100, 0], opacity: [0, 1] }}
                     transition={{ duration: 1 }}
                     src={"/profile.png"}
                     className="w-full md:w-2/5 h-4/5 rounded-3xl border-b-4 border-r-4 rounded-tr-3xl border-[#14e956]"

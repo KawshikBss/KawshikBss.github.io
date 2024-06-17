@@ -23,7 +23,7 @@ function Projects({}: Props) {
                 transition={{
                     duration: 2,
                 }}
-                className="text-[#14e956] font-black text-4xl py-3 px-7 border-4 border-[#0c8c34] rounded-xl bg-[#12141d] uppercase"
+                className="text-[#14e956] font-black text-center text-2xl md:text-4xl py-2 md:py-3 px-3 md:px-7 border-4 border-[#0c8c34] rounded-xl bg-[#12141d] uppercase"
             >
                 Projects Showcase
             </motion.span>
