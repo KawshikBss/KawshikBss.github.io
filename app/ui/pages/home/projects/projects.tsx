@@ -10,11 +10,9 @@ type Props = {};
 
 function Projects({}: Props) {
     return (
-        <div
-            id="projects"
-            className="w-full flex flex-col items-center gap-20 py-20"
-        >
+        <div className="w-full flex flex-col items-center gap-20 py-20">
             <motion.span
+                id="projects"
                 whileInView={{
                     transform: [
                         "rotateY(-180deg)",

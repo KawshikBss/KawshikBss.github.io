@@ -9,7 +9,10 @@ type Props = {};
 
 export default function Skills({}: Props) {
     return (
-        <div className="w-full flex flex-col items-center gap-20 py-32">
+        <div
+            id="skills"
+            className="w-full flex flex-col items-center gap-20 py-32"
+        >
             <motion.span
                 whileInView={{
                     transform: [
