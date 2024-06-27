@@ -24,10 +24,10 @@ export default async function handler(
                 message: "User Data Created",
                 user: newUser,
             });
-            } catch (error) {
-                console.error(error);
-                res.status(500).json({ message: "Something went wrong!" });
-            }
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({ message: "Something went wrong!" });
+        }
     } else if (req.method === "PUT") {
         const user = req.body;
 
@@ -61,9 +61,14 @@ export default async function handler(
             res.status(500).json({ message: "Something went wrong!" });
         }
     } else if (req.method === "GET") {
+        const { id } = req.query;
+        if (typeof id !== "string" || !ObjectId.isValid(id)) {
+            res.status(400).json({ message: "Invalid ID format" });
+            return;
+        }
         try {
-            const users = await collection.find({}).toArray();
-            const user = users[0];
+            const user = await collection.findOne({ _id: new ObjectId(id) });
+            console.log(user);
 
             res.json({
                 message: "User Fetched",
