@@ -5,12 +5,15 @@ import { motion } from "framer-motion";
 import { UserInterface } from "@/app/lib/defenitions";
 
 type Props = {
-    user: UserInterface;
+    user?: UserInterface;
 };
 
 function AboutMe({ user }: Props) {
     return (
-        <div id="about" className="w-full overflow-hidden flex flex-col items-center gap-20 py-20">
+        <div
+            id="about"
+            className="w-full overflow-hidden flex flex-col items-center gap-20 py-20"
+        >
             <motion.span
                 whileInView={{
                     transform: [

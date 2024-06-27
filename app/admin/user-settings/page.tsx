@@ -8,23 +8,23 @@ type Props = {};
 
 async function Admin({}: Props) {
     const userRes = await fetch(
-        "https://kawshikbss.github.io/api/settings/user?id=667d280da9fed2294a2b6d00"
+        "http://localhost:3000/api/settings/user?id=667d280da9fed2294a2b6d00"
     );
     const { user } = await userRes.json();
     const skillsRes = await fetch(
-        `https://kawshikbss.github.io/api/settings/skill?userId=${
+        `http://localhost:3000/api/settings/skill?userId=${
             user?._id ?? "0"
         }`
     );
     const skills = await skillsRes.json();
     const projectsRes = await fetch(
-        `https://kawshikbss.github.io/api/settings/project?userId=${
+        `http://localhost:3000/api/settings/project?userId=${
             user?._id ?? "0"
         }`
     );
     const projects = await projectsRes.json();
     const experiencesRes = await fetch(
-        `https://kawshikbss.github.io/api/settings/experience?userId=${
+        `http://localhost:3000/api/settings/experience?userId=${
             user?._id ?? "0"
         }`
     );

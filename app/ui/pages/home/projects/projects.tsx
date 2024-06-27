@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { ProjectInterface } from "@/app/lib/defenitions";
 
 type Props = {
-    projects: ProjectInterface[];
+    projects?: ProjectInterface[];
 };
 
 function Projects({ projects }: Props) {

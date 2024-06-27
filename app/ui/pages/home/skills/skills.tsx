@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { SkillInterface } from "@/app/lib/defenitions";
 
 type Props = {
-    skills: SkillInterface[];
+    skills?: SkillInterface[];
 };
 
 export default function Skills({ skills }: Props) {
@@ -45,7 +45,7 @@ export default function Skills({ skills }: Props) {
                 }}
                 className="w-fit grid grid-cols-3 md:grid-cols-6 gap-2 bg-[#0c8c34] p-4 rounded-3xl"
             >
-                {skills.map((skill: SkillInterface, index: number) => (
+                {skills?.map((skill: SkillInterface, index: number) => (
                     <span
                         key={index}
                         className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-base text-[#f5f5f5] capitalize"

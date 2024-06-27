@@ -42,7 +42,7 @@ export const createSettings = async (formData: FormData) => {
     };
 
     const response = await fetch(
-        "https://kawshikbss.github.io/api/settings/user",
+        "http://localhost:3000/api/settings/user",
         {
             method: "POST",
             headers: {
@@ -83,7 +83,7 @@ export const updateSettings = async (formData: FormData) => {
     };
 
     const response = await fetch(
-        "https://kawshikbss.github.io/api/settings/user",
+        "http://localhost:3000/api/settings/user",
         {
             method: "PUT",
             body: JSON.stringify(setting),

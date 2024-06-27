@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ExperienceInterface } from "@/app/lib/defenitions";
 
 type Props = {
-    experiences: ExperienceInterface[];
+    experiences?: ExperienceInterface[];
 };
 
 function Experience({ experiences }: Props) {

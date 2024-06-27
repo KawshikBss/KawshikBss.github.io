@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { UserInterface } from "@/app/lib/defenitions";
 
 type Props = {
-    user: UserInterface;
+    user?: UserInterface;
 };
 
 function Hero({ user }: Props) {

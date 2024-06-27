@@ -34,7 +34,7 @@ export const createProject = async (formData: FormData) => {
             link: validatedFields.data.link,
         };
         const res = await fetch(
-            "https://kawshikbss.github.io/api/settings/project/",
+            "http://localhost:3000/api/settings/project/",
             {
                 method: "POST",
                 headers: {

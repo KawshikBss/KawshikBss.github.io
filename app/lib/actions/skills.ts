@@ -24,7 +24,7 @@ export const createSkill = async (formData: FormData) => {
             userId: validatedFields.data.userId,
         };
         const res = await fetch(
-            "https://kawshikbss.github.io/api/settings/skill/",
+            "http://localhost:3000/api/settings/skill/",
             {
                 method: "POST",
                 headers: {
