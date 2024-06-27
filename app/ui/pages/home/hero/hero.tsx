@@ -18,14 +18,14 @@ function Hero({}: Props) {
                         Hi there! I'm Kawshik Biswas
                     </span>
                     <h1 className="text-[#f5f5f5] text-5xl font-black capitalize">
-                        a{" "}
+                        An Innovative{" "}
                         <span className="text-[#14e956]">
-                            Frontend Engineer
-                        </span>
-                        . I help startups{" "}
-                        <span className="text-[#14e956]">launch</span> and{" "}
-                        <span className="text-[#14e956]">grow</span> their
-                        products
+                            Software Developer
+                        </span>{" "}
+                        Specializing in Scalable{" "}
+                        <span className="text-[#14e956]">Web</span> and{" "}
+                        <span className="text-[#14e956]">Mobile</span>{" "}
+                        Applications.
                     </h1>
                     <p className="text-[#f5f5f5] text-base font-bold">
                         I am a software engineer with more than four years of
