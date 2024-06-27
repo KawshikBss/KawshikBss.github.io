@@ -3,12 +3,11 @@ import React from "react";
 import Card from "./card";
 import { motion } from "framer-motion";
 import { ExperienceInterface } from "@/app/lib/defenitions";
+import { ExperienceData } from "@/app/lib/data";
 
-type Props = {
-    experiences?: ExperienceInterface[];
-};
+type Props = {};
 
-function Experience({ experiences }: Props) {
+function Experience({}: Props) {
     return (
         <div
             id="experience"
@@ -33,8 +32,11 @@ function Experience({ experiences }: Props) {
             >
                 Experience
             </motion.span>
-            <Card index={0} />
-            <Card index={1} />
+            {ExperienceData.map(
+                (experience: ExperienceInterface, index: number) => (
+                    <Card experience={experience} index={index} />
+                )
+            )}
         </div>
     );
 }

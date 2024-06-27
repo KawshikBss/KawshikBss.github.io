@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { UserInterface } from "@/app/lib/defenitions";
 import { UserData } from "@/app/lib/data";
+import clsx from "clsx";
 
 type Props = {};
 
@@ -37,27 +38,25 @@ function AboutMe({}: Props) {
                     transition={{ duration: 1.5 }}
                     className="w-full md:w-1/5 h-[50vh] relative"
                 >
-                    <Image
-                        src={"/profile.png"}
-                        className="transition-all duration-300 ease-in-out w-48 md:w-80 border-2 border-[#14e956] cursor-pointer rounded-lg absolute top-10 left-40 hover:z-50 rotate-12 hover:scale-110 hover:rotate-0"
-                        alt="about"
-                        width={200}
-                        height={300}
-                    />
-                    <Image
-                        src={"/profile.png"}
-                        className="transition-all duration-300 ease-in-out w-48 md:w-80 border-2 border-[#14e956] cursor-pointer rounded-lg absolute top-20 left-10 hover:z-50 -rotate-12 hover:scale-110 hover:rotate-0"
-                        alt="about"
-                        width={200}
-                        height={300}
-                    />
-                    <Image
-                        src={"/profile.png"}
-                        className="transition-all duration-300 ease-in-out w-48 md:w-80 border-2 border-[#14e956] cursor-pointer rounded-lg absolute inset-0 left-20 hover:z-50 hover:scale-110 hover:rotate-0"
-                        alt="about"
-                        width={200}
-                        height={300}
-                    />
+                    {UserData.images?.map(
+                        (imageLink: string, index: number) => (
+                            <Image
+                                src={imageLink}
+                                className={clsx(
+                                    "transition-all duration-300 ease-in-out w-48 md:w-80 border-2 border-[#14e956] cursor-pointer rounded-lg hover:scale-110 hover:rotate-0 absolute hover:z-50",
+                                    {
+                                        "top-8 left-40 rotate-12": index === 0,
+                                        "top-20 left-10 -rotate-12":
+                                            index === 1,
+                                        "inset-0 left-20": index === 2,
+                                    }
+                                )}
+                                alt="about"
+                                width={200}
+                                height={300}
+                            />
+                        )
+                    )}
                 </motion.div>
                 <motion.div
                     whileInView={{ x: [100, 0], opacity: [0, 1] }}

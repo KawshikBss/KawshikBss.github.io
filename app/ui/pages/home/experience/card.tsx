@@ -1,12 +1,14 @@
+import { ExperienceInterface } from "@/app/lib/defenitions";
 import clsx from "clsx";
 import Image from "next/image";
 import React from "react";
 
 type Props = {
+    experience: ExperienceInterface;
     index: number;
 };
 
-function Card({ index }: Props) {
+function Card({ experience, index }: Props) {
     return (
         <div
             className={clsx(
@@ -20,29 +22,29 @@ function Card({ index }: Props) {
             {" "}
             <div className="w-full md:w-fit h-full flex flex-col-reverse md:flex-col items-center md:items-start justify-between gap-4 md:gap-auto">
                 <span className="text-[#12141d] text-lg font-extrabold">
-                    Company
+                    {experience.company ?? "N/A"}
                 </span>
                 <Image
-                    src={"/sjlogo.png"}
+                    src={experience.logo ?? "N/A"}
                     className="w-20 h-20 rounded-lg mt-4"
                     alt="company"
                     width={100}
                     height={100}
                 />
             </div>
-            <div className="w-full md:w-fit flex flex-col items-start justify-between gap-2 md:gap-4">
+            <div className="w-full md:w-fit flex flex-col items-start justify-between mx-4 gap-2 md:gap-4">
                 <span className="text-[#12141d] text-lg font-bold text-center">
-                    Sr. Software Developer
+                    {experience.designation ?? "N/A"}
                 </span>
                 <ul className="text-[#12141d] text-base list-disc ml-4">
-                    <li>responsibilities</li>
-                    <li>responsibilities</li>
-                    <li>responsibilities</li>
+                    {experience.works.map((item: string, itemIndex: number) => (
+                        <li key={itemIndex}>{item}</li>
+                    )) ?? "N/A"}
                 </ul>
             </div>
             <div className="w-full md:w-fit flex flex-col items-center md:items-start justify-between gap-4">
                 <span className="text-[#12141d] text-base font-semibold">
-                    2022-present
+                    {experience.dates ?? "N/A"}
                 </span>
             </div>
         </div>
