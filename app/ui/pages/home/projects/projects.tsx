@@ -4,12 +4,11 @@ import Carousel from "./carousel";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ProjectInterface } from "@/app/lib/defenitions";
+import { ProjectsData } from "@/app/lib/data";
 
-type Props = {
-    projects?: ProjectInterface[];
-};
+type Props = {};
 
-function Projects({ projects }: Props) {
+function Projects({}: Props) {
     return (
         <div
             id="projects"
@@ -33,7 +32,7 @@ function Projects({ projects }: Props) {
             >
                 Projects Showcase
             </motion.span>
-            {projects?.length ? <Carousel items={projects} /> : ""}
+            {ProjectsData?.length ? <Carousel items={ProjectsData} /> : ""}
             <Link
                 href={"/"}
                 className="bg-[#14e956] py-3 px-8 rounded-lg text-lg text-[#12141d] font-black shadow-2xl shadow-[rgba(20,233,86,.74)] outline-offset-8 hover:outline hover:outline-4 outline-[#14e956] transition-all duration-300 ease-in-out animate-pulse"

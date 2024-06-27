@@ -3,12 +3,11 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import { UserInterface } from "@/app/lib/defenitions";
+import { UserData } from "@/app/lib/data";
 
-type Props = {
-    user?: UserInterface;
-};
+type Props = {};
 
-function AboutMe({ user }: Props) {
+function AboutMe({}: Props) {
     return (
         <div
             id="about"
@@ -66,7 +65,7 @@ function AboutMe({ user }: Props) {
                     className="w-full md:w-3/5 flex flex-col items-start justify-between gap-10 p-5 md:pr-12"
                 >
                     <h3>Curious about me?</h3>
-                    <p>{user?.full_bio ?? "N/A"}</p>
+                    <p>{UserData?.full_bio ?? "N/A"}</p>
                 </motion.div>
             </div>
         </div>
