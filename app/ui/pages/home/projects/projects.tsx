@@ -33,11 +33,17 @@ function Projects({}: Props) {
                 Projects Showcase
             </motion.span>
             {ProjectsData?.length ? <Carousel items={ProjectsData} /> : ""}
-            <Link
-                href={"/"}
-                className="bg-[#14e956] py-3 px-8 rounded-lg text-lg text-[#12141d] font-black shadow-2xl shadow-[rgba(20,233,86,.74)] outline-offset-8 hover:outline hover:outline-4 outline-[#14e956] transition-all duration-300 ease-in-out animate-pulse"
-            >
-                View All Projects
+            <Link href={"/"}>
+                <motion.span
+                    animate={{
+                        outlineOffset: ["2px", "10px", "2px"],
+                        outlineWidth: ["0px", "4px", "0"],
+                    }}
+                    transition={{ repeat: Infinity, duration: 2 }}
+                    className="bg-[#14e956] py-3 px-8 rounded-lg text-lg text-[#12141d] font-black shadow-2xl shadow-[rgba(20,233,86,.74)] outline outline-4 outline-[#14e956] animate-pulse"
+                >
+                    View All Projects
+                </motion.span>
             </Link>
         </div>
     );
