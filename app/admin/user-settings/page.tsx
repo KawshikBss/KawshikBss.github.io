@@ -7,7 +7,9 @@ import ExperienceForm from "@/app/ui/pages/admin/experience-form";
 type Props = {};
 
 async function Admin({}: Props) {
-    const userRes = await fetch("http://localhost:3000/api/settings/user");
+    const userRes = await fetch(
+        "http://localhost:3000/api/settings/user?id=667d280da9fed2294a2b6d00"
+    );
     const { user } = await userRes.json();
     const skillsRes = await fetch(
         `http://localhost:3000/api/settings/skill?userId=${user?._id ?? "0"}`
