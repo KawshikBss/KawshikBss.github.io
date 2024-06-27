@@ -2,12 +2,16 @@
 import React from "react";
 import Card from "./card";
 import { motion } from "framer-motion";
+import { ExperienceInterface } from "@/app/lib/defenitions";
 
-type Props = {};
+type Props = {
+    experiences: ExperienceInterface[];
+};
 
-function Experience({}: Props) {
+function Experience({ experiences }: Props) {
     return (
         <div
+            id="experience"
             className="w-full flex flex-col items-center gap-20 py-20"
             style={{ perspective: "1800px" }}
         >

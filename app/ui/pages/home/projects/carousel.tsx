@@ -5,13 +5,14 @@ import React, { useState } from "react";
 import { FaHandPointLeft, FaHandPointRight } from "react-icons/fa";
 import { AiOutlineEnter } from "react-icons/ai";
 import { motion } from "framer-motion";
+import { ProjectInterface } from "@/app/lib/defenitions";
 
 type Props = {
-    items: number[];
+    items: ProjectInterface[];
 };
 
 function Carousel({ items }: Props) {
-    const [currentItem, setCurrentItem] = useState<number>(items[0] ?? 0);
+    const [currentItem, setCurrentItem] = useState<number>(0);
     const prev = () =>
         setCurrentItem((prev) => {
             return prev > 0 ? prev - 1 : prev;
@@ -23,12 +24,15 @@ function Carousel({ items }: Props) {
     return (
         <motion.div
             whileInView={{ left: [-100, 0] }}
-            transition={{ duration: 1.7}}
+            transition={{ duration: 1.7 }}
             className="w-full h-[80vh] md:h-[100vh] relative"
         >
             <div
-                className="h-full bg-[url('/hero-bg.jpg')] bg-cover bg-center"
-                style={{ WebkitFilter: "blur(8px)" }}
+                className={`h-full bg-cover bg-center`}
+                style={{
+                    background: `url('${items[currentItem].thumbnail}')`,
+                    WebkitFilter: "blur(8px)",
+                }}
             />
             <div className="w-full h-full flex flex-row items-center justify-around py-20 absolute inset-0">
                 <FaHandPointLeft
@@ -37,7 +41,7 @@ function Carousel({ items }: Props) {
                 />
                 <div className="w-[260px] md:w-[600px] rounded-xl bg-[#fdfdfd] my-20">
                     <Image
-                        src={"/hero-bg.jpg"}
+                        src={items[currentItem].thumbnail}
                         className="w-full h-2/5 rounded-xl object-contain"
                         alt="project"
                         width={240}
@@ -45,27 +49,26 @@ function Carousel({ items }: Props) {
                     />
                     <div className="w-full p-3">
                         <h4 className="text-[#14e956] text-base md:text-2xl font-black mb-1 md:mb-2">
-                            {currentItem}
+                            {items[currentItem].name}
                         </h4>
                         <p className="text-[#1e2128] text-xs md:text-base capitalize font-semibold mb-1 md:mb-2">
-                            Manage your phone contacts the easy way. create,
-                            update and delete your personal contacts all from
-                            one app. This is a MERN stack app with react redux
-                            toolkit. Find source code on my github
+                            {items[currentItem].description}
                         </p>
                         <div className="w-full flex flex-row items-center flex-wrap gap-4 mb-2 md:mb-4">
-                            <span className="bg-[#1e2128] py-1 px-2 rounded-2xl text-[#fffff4] font-bold lowercase">
-                                react
-                            </span>
-                            <span className="bg-[#1e2128] py-1 px-2 rounded-2xl text-[#fffff4] font-bold lowercase">
-                                react
-                            </span>
-                            <span className="bg-[#1e2128] py-1 px-2 rounded-2xl text-[#fffff4] font-bold lowercase">
-                                react
-                            </span>
+                            {items[currentItem].techs.map(
+                                (tech: string, index: number) => (
+                                    <span
+                                        key={index}
+                                        className="bg-[#1e2128] py-1 px-2 rounded-2xl text-[#fffff4] font-bold lowercase"
+                                    >
+                                        {tech}
+                                    </span>
+                                )
+                            )}
                         </div>
                         <Link
-                            href={"/"}
+                            href={items[currentItem].link ?? "/"}
+                            target="_blank"
                             className="bg-[#fffff4] md:py-1 px-1 md:px-2 rounded-2xl text-[#1e2128] border-2 border-[#1e2128] font-bold lowercase flex items-center gap-1 w-fit"
                         >
                             visit <AiOutlineEnter />

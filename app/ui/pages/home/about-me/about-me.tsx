@@ -2,12 +2,15 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import { UserInterface } from "@/app/lib/defenitions";
 
-type Props = {};
+type Props = {
+    user: UserInterface;
+};
 
-function AboutMe({}: Props) {
+function AboutMe({ user }: Props) {
     return (
-        <div className="w-full overflow-hidden flex flex-col items-center gap-20 py-20">
+        <div id="about" className="w-full overflow-hidden flex flex-col items-center gap-20 py-20">
             <motion.span
                 whileInView={{
                     transform: [
@@ -60,27 +63,7 @@ function AboutMe({}: Props) {
                     className="w-full md:w-3/5 flex flex-col items-start justify-between gap-10 p-5 md:pr-12"
                 >
                     <h3>Curious about me?</h3>
-                    <p>
-                        Exercitation ut enim ad velit aute nulla. Velit
-                        adipisicing minim dolore esse sit consequat pariatur
-                        dolore in mollit. Lorem veniam id sit mollit voluptate
-                        aliquip tempor in ipsum. Exercitation Lorem ad
-                        incididunt deserunt laboris ullamco sint deserunt
-                        consectetur qui ex consectetur. Et velit consectetur
-                        aute ea qui cillum ex in. Magna elit tempor dolore
-                        adipisicing anim adipisicing voluptate ipsum cupidatat
-                        dolore. Duis nostrud pariatur qui aliquip tempor amet in
-                        cupidatat. Exercitation ut enim ad velit aute nulla.
-                        Velit adipisicing minim dolore esse sit consequat
-                        pariatur dolore in mollit. Lorem veniam id sit mollit
-                        voluptate aliquip tempor in ipsum. Exercitation Lorem ad
-                        incididunt deserunt laboris ullamco sint deserunt
-                        consectetur qui ex consectetur. Et velit consectetur
-                        aute ea qui cillum ex in. Magna elit tempor dolore
-                        adipisicing anim adipisicing voluptate ipsum cupidatat
-                        dolore. Duis nostrud pariatur qui aliquip tempor amet in
-                        cupidatat.
-                    </p>
+                    <p>{user?.full_bio ?? "N/A"}</p>
                 </motion.div>
             </div>
         </div>

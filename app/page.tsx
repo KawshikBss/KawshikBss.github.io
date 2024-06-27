@@ -9,14 +9,31 @@ import Contact from "./ui/pages/home/contact/contact";
 
 const exoSpace = localFont({ src: "../fonts/ExoSpace.ttf" });
 
-export default function Home() {
+export default async function Home() {
+    const userRes = await fetch(
+        "http://localhost:3000/api/settings/user?id=667d280da9fed2294a2b6d00"
+    );
+    const { user } = await userRes.json();
+    const skillsRes = await fetch(
+        "http://localhost:3000/api/settings/skill?userId=667d280da9fed2294a2b6d00"
+    );
+    const { data: skills } = await skillsRes.json();
+    const projectsRes = await fetch(
+        "http://localhost:3000/api/settings/project?userId=667d280da9fed2294a2b6d00"
+    );
+    const { data: projects } = await projectsRes.json();
+    const experiencesRes = await fetch(
+        "http://localhost:3000/api/settings/experience?userId=667d280da9fed2294a2b6d00"
+    );
+    const { data: experiences } = await experiencesRes.json();
+
     return (
         <main className={clsx("min-h-screen", exoSpace.className)}>
-            <Hero />
-            <AboutMe />
-            <Skills />
-            <Projects />
-            <Experience />
+            <Hero user={user} />
+            <AboutMe user={user} />
+            <Skills skills={skills} />
+            <Projects projects={projects} />
+            <Experience experiences={experiences} />
             <Contact />
         </main>
     );

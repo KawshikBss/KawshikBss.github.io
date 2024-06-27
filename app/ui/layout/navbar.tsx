@@ -6,7 +6,16 @@ import { motion } from "framer-motion";
 
 type Props = {};
 
+const navLinks = ["about", "skills", "projects", "experience", "contact"];
+
 function Navbar({}: Props) {
+    const goTo = (id: string) => {
+        const targetSection = document.getElementById(id);
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <motion.div
             initial={{ y: -100 }}
@@ -24,21 +33,14 @@ function Navbar({}: Props) {
                 <li className="text-[#12141d] hover:bg-[#12141d] transition-all duration-300 ease-in-out py-1 px-2 rounded-lg hover:text-[#FFFFFF] text-base">
                     <Link href={"/"}>Home</Link>
                 </li>
-                <li className="text-[#12141d] hover:bg-[#12141d] transition-all duration-300 ease-in-out py-1 px-2 rounded-lg hover:text-[#FFFFFF] text-base">
-                    <Link href={"/"}>About</Link>
-                </li>
-                <li className="text-[#12141d] hover:bg-[#12141d] transition-all duration-300 ease-in-out py-1 px-2 rounded-lg hover:text-[#FFFFFF] text-base">
-                    <Link href={"/"}>Skills</Link>
-                </li>
-                <li className="text-[#12141d] hover:bg-[#12141d] transition-all duration-300 ease-in-out py-1 px-2 rounded-lg hover:text-[#FFFFFF] text-base">
-                    <Link href={"/"}>Projects</Link>
-                </li>
-                <li className="text-[#12141d] hover:bg-[#12141d] transition-all duration-300 ease-in-out py-1 px-2 rounded-lg hover:text-[#FFFFFF] text-base">
-                    <Link href={"/"}>Experience</Link>
-                </li>
-                <li className="text-[#12141d] hover:bg-[#12141d] transition-all duration-300 ease-in-out py-1 px-2 rounded-lg hover:text-[#FFFFFF] text-base">
-                    <Link href={"/"}>Contact</Link>
-                </li>
+                {navLinks.map((link: string, index: number) => (
+                    <li
+                        key={index}
+                        className="text-[#12141d] capitalize cursor-pointer hover:bg-[#12141d] transition-all duration-300 ease-in-out py-1 px-2 rounded-lg hover:text-[#FFFFFF] text-base"
+                    >
+                        <span onClick={() => goTo(link)}>{link}</span>
+                    </li>
+                ))}
                 <div className="h-8 w-[2px] bg-[#12141d] rounded-xl" />
                 <Link
                     href={"/"}

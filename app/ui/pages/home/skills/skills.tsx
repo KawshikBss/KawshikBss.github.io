@@ -2,10 +2,13 @@
 import React from "react";
 import { FaReact } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { SkillInterface } from "@/app/lib/defenitions";
 
-type Props = {};
+type Props = {
+    skills: SkillInterface[];
+};
 
-export default function Skills({}: Props) {
+export default function Skills({ skills }: Props) {
     return (
         <div className="w-full flex flex-col items-center gap-20 py-32">
             <motion.span
@@ -42,46 +45,15 @@ export default function Skills({}: Props) {
                 }}
                 className="w-fit grid grid-cols-3 md:grid-cols-6 gap-2 bg-[#0c8c34] p-4 rounded-3xl"
             >
-                <span className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-base text-[#f5f5f5] capitalize">
-                    <FaReact className="text-[#0c8c34] w-[27px] h-[27px]" />
-                    <span>React</span>
-                </span>
-                <span className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-base text-[#f5f5f5] capitalize">
-                    <FaReact className="text-[#0c8c34] w-[27px] h-[27px]" />
-                    <span>React</span>
-                </span>
-                <span className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-base text-[#f5f5f5] capitalize">
-                    <FaReact className="text-[#0c8c34] w-[27px] h-[27px]" />
-                    <span>React</span>
-                </span>
-                <span className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-base text-[#f5f5f5] capitalize">
-                    <FaReact className="text-[#0c8c34] w-[27px] h-[27px]" />
-                    <span>React</span>
-                </span>
-                <span className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-base text-[#f5f5f5] capitalize">
-                    <FaReact className="text-[#0c8c34] w-[27px] h-[27px]" />
-                    <span>React</span>
-                </span>
-                <span className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-base text-[#f5f5f5] capitalize">
-                    <FaReact className="text-[#0c8c34] w-[27px] h-[27px]" />
-                    <span>React</span>
-                </span>
-                <span className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-base text-[#f5f5f5] capitalize">
-                    <FaReact className="text-[#0c8c34] w-[27px] h-[27px]" />
-                    <span>React</span>
-                </span>
-                <span className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-base text-[#f5f5f5] capitalize">
-                    <FaReact className="text-[#0c8c34] w-[27px] h-[27px]" />
-                    <span>React</span>
-                </span>
-                <span className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-base text-[#f5f5f5] capitalize">
-                    <FaReact className="text-[#0c8c34] w-[27px] h-[27px]" />
-                    <span>React</span>
-                </span>
-                <span className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-base text-[#f5f5f5] capitalize">
-                    <FaReact className="text-[#0c8c34] w-[27px] h-[27px]" />
-                    <span>React</span>
-                </span>
+                {skills.map((skill: SkillInterface, index: number) => (
+                    <span
+                        key={index}
+                        className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-base text-[#f5f5f5] capitalize"
+                    >
+                        <FaReact className="text-[#0c8c34] w-[27px] h-[27px]" />
+                        <span>{skill.name}</span>
+                    </span>
+                ))}
             </motion.div>
         </div>
     );

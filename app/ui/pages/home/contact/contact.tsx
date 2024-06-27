@@ -4,7 +4,10 @@ type Props = {};
 
 function Contact({}: Props) {
     return (
-        <div className="w-full flex flex-col items-center gap-20 py-20">
+        <div
+            id="contact"
+            className="w-full flex flex-col items-center gap-20 py-20"
+        >
             <span className="text-[#14e956] font-black text-4xl uppercase transform skew-y-6 drop-shadow-[0_4px_4px_#14e956]">
                 Connect With Me
             </span>
