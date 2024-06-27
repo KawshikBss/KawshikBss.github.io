@@ -40,7 +40,7 @@ export default function Skills({}: Props) {
                 transition={{
                     duration: 2,
                 }}
-                className="w-5/6 md:w-2/5 flex flex-row justify-between items-start flex-wrap gap-2 bg-[#0c8c34] p-4 rounded-3xl"
+                className="w-fit grid grid-cols-3 md:grid-cols-6 gap-2 bg-[#0c8c34] p-4 rounded-3xl"
             >
                 <span className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-base text-[#f5f5f5] capitalize">
                     <FaReact className="text-[#0c8c34] w-[27px] h-[27px]" />
