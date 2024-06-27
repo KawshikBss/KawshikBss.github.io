@@ -33,13 +33,16 @@ export const createProject = async (formData: FormData) => {
             techs: techs,
             link: validatedFields.data.link,
         };
-        const res = await fetch("http://localhost:3000/api/settings/project/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(project),
-        });
+        const res = await fetch(
+            "https://kawshikbss.github.io/api/settings/project/",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(project),
+            }
+        );
         if (res.status === 200) revalidatePath("/admin/user-settings");
     }
 };

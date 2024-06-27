@@ -38,7 +38,7 @@ export const createExperience = async (formData: FormData) => {
             dates: validatedFields.data.dates,
         };
         const res = await fetch(
-            "http://localhost:3000/api/settings/experience/",
+            "https://kawshikbss.github.io/api/settings/experience/",
             {
                 method: "POST",
                 headers: {

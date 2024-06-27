@@ -41,13 +41,16 @@ export const createSettings = async (formData: FormData) => {
         full_bio: validatedFields.data.full_bio,
     };
 
-    const response = await fetch("http://localhost:3000/api/settings/user", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(setting),
-    });
+    const response = await fetch(
+        "https://kawshikbss.github.io/api/settings/user",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(setting),
+        }
+    );
 
     if (response.status === 200) {
         revalidatePath("/");
@@ -79,10 +82,13 @@ export const updateSettings = async (formData: FormData) => {
         full_bio: validatedFields.data.full_bio,
     };
 
-    const response = await fetch("http://localhost:3000/api/settings/user", {
-        method: "PUT",
-        body: JSON.stringify(setting),
-    });
+    const response = await fetch(
+        "https://kawshikbss.github.io/api/settings/user",
+        {
+            method: "PUT",
+            body: JSON.stringify(setting),
+        }
+    );
 
     if (response.status === 200) {
         revalidatePath("/");

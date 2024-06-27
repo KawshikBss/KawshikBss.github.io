@@ -23,13 +23,16 @@ export const createSkill = async (formData: FormData) => {
             icon: validatedFields.data.icon,
             userId: validatedFields.data.userId,
         };
-        const res = await fetch("http://localhost:3000/api/settings/skill/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(skill),
-        });
+        const res = await fetch(
+            "https://kawshikbss.github.io/api/settings/skill/",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(skill),
+            }
+        );
         if (res.status === 200) revalidatePath("/admin/user-settings");
     }
 };
