@@ -50,9 +50,9 @@ export default function Skills({}: Props) {
                 {SkillsData?.map((skill: SkillInterface, index: number) => (
                     <span
                         key={index}
-                        className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-base text-[#f5f5f5] capitalize"
+                        className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-sm md:text-base text-[#f5f5f5] capitalize"
                     >
-                        <FaReact className="text-[#0c8c34] w-[27px] h-[27px]" />
+                        <FaReact className="text-[#0c8c34] w-[20px] h-[20px] md:w-[27px] md:h-[27px]" />
                         <span>{skill.name}</span>
                     </span>
                 ))}
