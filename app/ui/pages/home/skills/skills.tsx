@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import { FaReact } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { SkillInterface } from "@/app/lib/defenitions";
 import { SkillsData } from "@/app/lib/data";
+import RenderIcon from "@/app/ui/components/render-icon";
 
 type Props = {};
 
@@ -52,7 +52,10 @@ export default function Skills({}: Props) {
                         key={index}
                         className="flex flex-row justify-between items-center gap-2 rounded-xl px-2 py-4 bg-[#021709] text-sm md:text-base text-[#f5f5f5] capitalize"
                     >
-                        <FaReact className="text-[#0c8c34] w-[20px] h-[20px] md:w-[27px] md:h-[27px]" />
+                        <RenderIcon
+                            name={skill.icon}
+                            className="text-[#0c8c34] w-[20px] h-[20px] md:w-[27px] md:h-[27px]"
+                        />
                         <span>{skill.name}</span>
                     </span>
                 ))}
