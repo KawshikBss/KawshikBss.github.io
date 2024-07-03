@@ -37,6 +37,29 @@ body {
     transform-origin: none;
 }
 
+.project-item-left {
+    transition: 0.5s all ease-in-out;
+    scale: 0.8;
+    transform: rotateY(25deg) rotateX(10deg);
+    filter: blur(0.2px);
+}
+
+.project-item-right {
+    transition: 0.5s all ease-in-out;
+    scale: 0.8;
+    transform: rotateY(-25deg) rotateX(10deg);
+}
+
+.project-item-left:hover {
+    scale: 1;
+    transform: rotateY(-15deg) rotateX(10deg) translateY(-50px);
+}
+
+.project-item-right:hover {
+    scale: 1;
+    transform: rotateY(15deg) rotateX(10deg) translateY(-50px);
+}
+
 @layer utilities {
     .text-balance {
         text-wrap: balance;
