@@ -45,7 +45,7 @@ export default function Skills({}: Props) {
                 transition={{
                     duration: 2,
                 }}
-                className="w-fit grid grid-cols-3 md:grid-cols-6 gap-2 bg-[#0c8c34] p-4 rounded-3xl"
+                className="w-fit grid grid-cols-2 md:grid-cols-6 gap-2 bg-[#0c8c34] p-4 rounded-3xl"
             >
                 {SkillsData?.map((skill: SkillInterface, index: number) => (
                     <span

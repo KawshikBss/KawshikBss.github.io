@@ -37,9 +37,9 @@ function Carousel({ items }: Props) {
             <div className="w-full h-full flex flex-row items-center justify-around py-20 absolute inset-0">
                 <FaHandPointLeft
                     onClick={prev}
-                    className="drop-shadow-xl w-[30px] h-[30px] md:w-[60px] md:h-[60px] cursor-pointer rotate-45 hover:rotate-0 hover:scale-110 text-[#fdfdfd] transition-all duration-300 ease-in-out"
+                    className="drop-shadow-xl w-[40px] h-[40px] md:w-[80px] md:h-[80px] cursor-pointer rotate-45 hover:rotate-0 hover:scale-110 stroke-[12px] stroke-[#1e2128] text-[#fdfdfd] transition-all duration-300 ease-in-out"
                 />
-                <div className="drop-shadow-xl w-[260px] md:w-[600px] rounded-xl bg-[#fdfdfd] my-20">
+                <div className="shadow-2xl w-[260px] md:w-[600px] rounded-xl bg-[#fdfdfd] my-20">
                     <Image
                         src={items[currentItem].thumbnail}
                         className="w-full h-2/5 rounded-xl object-contain"
@@ -77,7 +77,7 @@ function Carousel({ items }: Props) {
                 </div>
                 <FaHandPointRight
                     onClick={next}
-                    className="drop-shadow-xl w-[30px] h-[30px] md:w-[60px] md:h-[60px] -rotate-45 hover:rotate-0 hover:scale-110 cursor-pointer text-[#fdfdfd] transition-all duration-300 ease-in-out"
+                    className="drop-shadow-xl w-[40px] h-[40px] md:w-[80px] md:h-[80px] -rotate-45 hover:rotate-0 hover:scale-110 cursor-pointer stroke-[12px] stroke-[#1e2128] text-[#fdfdfd] transition-all duration-300 ease-in-out"
                 />
             </div>
         </motion.div>
