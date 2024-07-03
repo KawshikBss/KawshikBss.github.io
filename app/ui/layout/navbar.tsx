@@ -43,7 +43,8 @@ function Navbar({}: Props) {
                 ))}
                 <div className="h-8 w-[2px] bg-[#12141d] rounded-xl" />
                 <Link
-                    href={"/"}
+                    href={"/Kawshik-Biswas-Resume.pdf"}
+                    target="_blank"
                     className="py-2 px-4 rounded-xl bg-[#12141d] text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#12141d] transition-all duration-300 ease-in-out"
                 >
                     Download CV
