@@ -33,6 +33,7 @@ export const SkillsData = [
     { name: "Pygame", icon: "Laravel" },
     { name: "MongoDB", icon: "MongoDB" },
     { name: "Postgresql", icon: "Postgresql" },
+    { name: "Vercel", icon: "vercel" },
     { name: "Algorithms", icon: "Algorithms" },
     { name: "DataStructures", icon: "DataStructures" },
 ] as SkillInterface[];
@@ -82,3 +83,27 @@ export const ExperienceData = [
         link: "https://sohojware.com/",
     },
 ] as ExperienceInterface[];
+
+export const ContactsData = {
+    socialLinks: [
+        {
+            name: "LinkedIn",
+            icon: "LinkedIn",
+            link: "https://www.linkedin.com/in/kawshikbss/",
+            color: "#0a66c2",
+        },
+        {
+            name: "Github",
+            icon: "Github",
+            link: "https://github.com/KawshikBss",
+            color: "#0d1117",
+        },
+        {
+            name: "Instagram",
+            icon: "Instagram",
+            link: "https://www.instagram.com/kawshik_bss/",
+            color: "#f92e3e",
+        },
+    ],
+    mail: "kawshikbss@gmail.com",
+};
