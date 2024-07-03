@@ -5,6 +5,9 @@ import Navbar from "./ui/layout/navbar";
 import Footer from "./ui/layout/footer";
 
 const inter = Inter({ subsets: ["latin"] });
+import localFont from "next/font/local";
+
+const exoSpace = localFont({ src: "../fonts/ExoSpace.ttf" });
 
 export const metadata: Metadata = {
     title: "KawshikBss",
@@ -18,7 +21,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <body className={exoSpace.className}>
                 <Navbar />
                 {children}
                 <Footer />
