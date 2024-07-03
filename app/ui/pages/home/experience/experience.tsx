@@ -34,7 +34,7 @@ function Experience({}: Props) {
             </motion.span>
             {ExperienceData.map(
                 (experience: ExperienceInterface, index: number) => (
-                    <Card experience={experience} index={index} />
+                    <Card key={index} experience={experience} index={index} />
                 )
             )}
         </div>

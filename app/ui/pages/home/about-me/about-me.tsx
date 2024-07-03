@@ -41,6 +41,7 @@ function AboutMe({}: Props) {
                     {UserData.images?.map(
                         (imageLink: string, index: number) => (
                             <Image
+                                key={index}
                                 src={imageLink}
                                 className={clsx(
                                     "transition-all duration-300 ease-in-out w-48 md:w-80 border-2 border-[#14e956] cursor-pointer rounded-lg hover:scale-110 hover:rotate-0 absolute hover:z-50",
