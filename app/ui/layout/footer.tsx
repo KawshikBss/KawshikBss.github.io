@@ -12,7 +12,7 @@ function Footer({}: Props) {
                 {ContactsData.socialLinks.map((social: any, index: number) => (
                     <li
                         key={index}
-                        className="w-full md:w-1/3 px-5 py-4 text-xl font-black"
+                        className="w-full md:w-1/3 px-5 py-4 text-xl font-black overflow-hidden"
                         style={{
                             backgroundColor: social.color ?? "#000",
                         }}
@@ -20,7 +20,7 @@ function Footer({}: Props) {
                         <Link
                             href={social.link}
                             target="_blank"
-                            className="flex flex-row justify-between items-center"
+                            className="flex flex-row justify-between hover:justify-center hover:gap-5 hover:scale-125 hover:shadow-lg items-center transition-all duration-500 ease-in-out"
                         >
                             {social.name}
                             <RenderIcon

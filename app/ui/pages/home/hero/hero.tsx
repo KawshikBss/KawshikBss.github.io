@@ -35,6 +35,7 @@ function Hero({}: Props) {
                     </p>
                 </motion.div>
                 <motion.img
+                    loading="lazy"
                     whileInView={{ x: [100, 0], opacity: [0, 1] }}
                     transition={{ duration: 1 }}
                     src={UserData?.profile_image}
