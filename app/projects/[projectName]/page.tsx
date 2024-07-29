@@ -50,15 +50,4 @@ function SingleProject({ params: { projectName } }: Props) {
     );
 }
 
-export async function getStaticPaths() {
-    const paths = SeperateProjects.map((project) => ({
-        params: { projectName: project.slug },
-    }));
-
-    return {
-        paths,
-        fallback: false,
-    };
-}
-
 export default SingleProject;
