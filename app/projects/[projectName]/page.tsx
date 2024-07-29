@@ -3,10 +3,6 @@ import Image from "next/image";
 import React from "react";
 import ViewBtn from "@/app/ui/pages/projects/view-btn";
 
-export function generateStaticParams() {
-    return [{ projectName: ["/"] }];
-}
-
 type Props = {
     params: { projectName: string };
 };
@@ -52,6 +48,17 @@ function SingleProject({ params: { projectName } }: Props) {
             </div>
         </div>
     );
+}
+
+export async function getStaticPaths() {
+    const paths = SeperateProjects.map((project) => ({
+        params: { projectName: project.slug },
+    }));
+
+    return {
+        paths,
+        fallback: false,
+    };
 }
 
 export default SingleProject;
