@@ -51,7 +51,7 @@ function Navbar({}: Props) {
                 </Link>
             </ul>
             <Link
-                href={"/"}
+                href={"/Kawshik-Biswas-Resume.pdf"}
                 className="md:hidden py-2 px-2 md:px-4 rounded-xl bg-[#12141d] text-[#FFFFFF]"
             >
                 Download CV
