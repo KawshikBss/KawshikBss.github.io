@@ -9,12 +9,11 @@ export const UserData = {
     first_name: "Kawshik",
     last_name: "Biswas",
     designation: "Software Developer",
-    profile_image:
-        "https://i.ibb.co/nQV4xrn/7-BAF7071-EB3-C-4-F97-8-B0-D-9-F817-E0-FFBD3-optimized-950.png",
+    profile_image: "/profile.png",
     images: [
         "https://i.ibb.co/s59vVfh/IMG-5941.jpg",
-        "https://i.ibb.co/5Mqrspq/IMG-4038.png",
-        "https://i.ibb.co/K2yd6rw/IMG-4118.png",
+        "/images/users/IMG_4038.png",
+        "/images/users/IMG_4118.png",
     ],
     short_bio:
         "Experienced software developer with over 2 years in web and mobile application development. Expert in React, Next.js, and JavaScript, with a keen enthusiasm for learning new technologies. Known for crafting unique solutions to complex problems, continuously driving innovation and efficiency.",
@@ -41,28 +40,28 @@ export const SkillsData = [
 export const ProjectsData = [
     {
         name: "CORA'L",
-        thumbnail: "https://i.ibb.co/cJVmmX0/Screenshot-2024-06-27-181135.png",
+        thumbnail: "/images/projects/coral.png",
         description: "A multivendors e-commerce website",
         techs: ["react", " nextjs", "postgresql", "vercel"],
         link: "https://coral-coral.vercel.app",
     },
     {
         name: "Disputesend",
-        thumbnail: "https://i.ibb.co/kxMZVtf/Screenshot-2024-06-28-034603.png",
+        thumbnail: "/images/projects/disputesend.png",
         description: "Pay-After-Deletion Credit Repair",
         techs: ["react", " nextjs", "firebase", "vercel"],
         link: "https://disputesend.com/",
     },
     {
         name: "SnapShop",
-        thumbnail: "https://i.ibb.co/GFXv7rb/Screenshot-2024-06-28-035047.png",
+        thumbnail: "/images/projects/snapshop.png",
         description: "Mobile app for ordering medicine online",
         techs: ["react-native", "react-query", "laravel", "expo"],
         link: "https://play.google.com/store/apps/details?id=com.zilchdedennota.Snap_Shop&hl=en_US",
     },
     {
         name: "Alvita Nutrition",
-        thumbnail: "https://i.ibb.co/hVdLv2D/Screenshot-2024-06-28-034336.png",
+        thumbnail: "/images/projects/alvita.png",
         description: "Pharmaceutical Ecommerce and Blogging Website",
         techs: ["react", "nextjs", "react-query", "laravel"],
         link: "https://alvitanutrition.com/shop/",
@@ -112,7 +111,7 @@ export const SeperateProjects = [
     {
         slug: "dealer-man",
         name: "Dealer Man",
-        thumbnail: "/dealer-man-thumbnail.png",
+        thumbnail: "/images/projects/dealerman.png",
         description: "Hazari game tracking app",
         techs: ["flutter"],
         link: "/dealer-man.apk",
