@@ -7,8 +7,22 @@ type Props = {
     params: { projectName: string };
 };
 
-function SingleProject({ params: { projectName } }: Props) {
+export async function generateStaticParams() {
+    const paths = SeperateProjects.map((project) => ({
+        projectName: project.slug,
+    }));
+
+    return paths;
+}
+
+async function getProjectData(projectName: string) {
     const project = SeperateProjects.find((item) => item.slug === projectName);
+    return project;
+}
+
+const SingleProject = async ({ params: { projectName } }: Props) => {
+    const project = await getProjectData(projectName);
+
     return (
         <div className="w-full flex flex-col justify-between items-center xl:flex-row my-10">
             <div className="w-full xl:w-3/5" style={{ perspective: "800px" }}>
@@ -48,28 +62,6 @@ function SingleProject({ params: { projectName } }: Props) {
             </div>
         </div>
     );
-}
-
-export async function generateStaticParams() {
-    return SeperateProjects.map((project) => ({
-        projectName: project.slug,
-    }));
-}
-
-export async function generateStaticProps({
-    params,
-}: {
-    params: { projectName: string };
-}) {
-    const project = SeperateProjects.find(
-        (item) => item.slug === params.projectName
-    );
-
-    return {
-        props: {
-            project,
-        },
-    };
-}
+};
 
 export default SingleProject;
