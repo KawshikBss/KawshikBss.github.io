@@ -3,6 +3,10 @@ import Image from "next/image";
 import React from "react";
 import ViewBtn from "@/app/ui/pages/projects/view-btn";
 
+export function generateStaticParams() {
+    return [{ projectName: ["/"] }];
+}
+
 type Props = {
     params: { projectName: string };
 };
