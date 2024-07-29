@@ -107,3 +107,15 @@ export const ContactsData = {
     ],
     mail: "kawshikbss@gmail.com",
 };
+
+export const SeperateProjects = [
+    {
+        slug: "dealer-man",
+        name: "Dealer Man",
+        thumbnail: "/dealer-man-thumbnail.png",
+        description: "Hazari game tracking app",
+        techs: ["flutter"],
+        link: "/dealer-man.apk",
+        mobileApp: true,
+    },
+];
