@@ -50,4 +50,26 @@ function SingleProject({ params: { projectName } }: Props) {
     );
 }
 
+export async function generateStaticParams() {
+    return SeperateProjects.map((project) => ({
+        projectName: project.slug,
+    }));
+}
+
+export async function generateStaticProps({
+    params,
+}: {
+    params: { projectName: string };
+}) {
+    const project = SeperateProjects.find(
+        (item) => item.slug === params.projectName
+    );
+
+    return {
+        props: {
+            project,
+        },
+    };
+}
+
 export default SingleProject;
