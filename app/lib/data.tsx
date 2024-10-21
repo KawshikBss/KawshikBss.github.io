@@ -66,6 +66,14 @@ export const ProjectsData = [
         techs: ["react", "nextjs", "react-query", "laravel"],
         link: "https://alvitanutrition.com/shop/",
     },
+    {
+        name: "Newsbrief",
+        thumbnail: "/images/projects/newsbrief.jpg",
+        description: "News portal mobile app",
+        techs: ["flutter", "dart", "google-api", "laravel"],
+        link: "/newsbriefapp.apk",
+        mobileApp: true,
+    },
 ] as ProjectInterface[];
 
 export const ExperienceData = [
