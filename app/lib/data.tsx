@@ -125,4 +125,13 @@ export const SeperateProjects = [
         link: "/dealer-man.apk",
         mobileApp: true,
     },
+    {
+        slug: "newsbrief",
+        name: "Newsbrief",
+        thumbnail: "/images/projects/newsbrief.jpg",
+        description: "News portal mobile app",
+        techs: ["flutter", "dart", "google-api", "laravel"],
+        link: "/newsbriefapp.apk",
+        mobileApp: true,
+    },
 ];
