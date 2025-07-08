@@ -134,4 +134,13 @@ export const SeperateProjects = [
         link: "/newsbriefapp.apk",
         mobileApp: true,
     },
+    {
+        slug: "angelica",
+        name: "Angelica",
+        thumbnail: "/images/projects/angelica.jpg",
+        description: "Take control of your health and well-being with Angelica, the intelligent fasting app designed to make intermittent fasting easy, effective, and rewarding.",
+        techs: ["flutter", "dart", "google-api", "laravel"],
+        link: "/angelica.apk",
+        mobileApp: true,
+    },
 ];
