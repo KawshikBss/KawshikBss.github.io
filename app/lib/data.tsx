@@ -137,7 +137,7 @@ export const SeperateProjects = [
     {
         slug: "angelica",
         name: "Angelica",
-        thumbnail: "/images/projects/angelica.jpg",
+        thumbnail: "/images/projects/angelica.png",
         description: "Take control of your health and well-being with Angelica, the intelligent fasting app designed to make intermittent fasting easy, effective, and rewarding.",
         techs: ["flutter", "dart", "google-api", "laravel"],
         link: "/angelica.apk",
