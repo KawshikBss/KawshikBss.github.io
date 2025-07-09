@@ -9,11 +9,11 @@ export const UserData = {
     first_name: "Kawshik",
     last_name: "Biswas",
     designation: "Software Developer",
-    profile_image: "/profile.png",
+    profile_image: "/profile.jpg",
     images: [
+        "/images/users/img1.jpg",
         "https://i.ibb.co/s59vVfh/IMG-5941.jpg",
-        "/images/users/IMG_4038.png",
-        "/images/users/IMG_4118.png",
+        "/images/users/img2.png",
     ],
     short_bio:
         "Experienced software developer with over 2 years in web and mobile application development. Expert in React, Next.js, and JavaScript, with a keen enthusiasm for learning new technologies. Known for crafting unique solutions to complex problems, continuously driving innovation and efficiency.",
