@@ -143,4 +143,13 @@ export const SeperateProjects = [
         link: "/angelica.apk",
         mobileApp: true,
     },
+    {
+        slug: "meshnetworktest",
+        name: "Mesh Network Test",
+        thumbnail: "/images/projects/meshnetworktest.svg",
+        description: "A test app for mesh networking",
+        techs: ["flutter", "dart", "java", "kotlin"],
+        link: "/meshnetworktest.apk",
+        mobileApp: true,
+    },
 ];
